@@ -43,9 +43,9 @@ export default function Home() {
   };
 
   return (
-    <div className="bg-white min-h-screen w-screen flex flex-col">
+    <div className="bg-white min-h-screen w-full flex flex-col overflow-x-hidden">
       {/* SmartChartComponent */}
-      <div className="flex flex-col h-full w-full items-center justify-items-start">
+      <div className="flex flex-col h-full w-full items-center justify-items-start overflow-x-hidden">
         {/* Set the width of the container to 600px and ensure it doesn't overflow */}
         <div className="flex">
           <SmartChartComponent />

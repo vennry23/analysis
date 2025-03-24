@@ -154,7 +154,7 @@ const SmartChartComponent: React.FC = () => {
   };
 
   return (
-    <div style={{ width: '90vw', height: '50vh', display: 'flex', justifyContent: 'start', alignItems: 'left', borderRadius: '10px', backgroundColor: 'white', boxShadow: '0 0 10px 0 rgba(0, 0, 0, 0.1)', margin: '0 auto', overflow: 'hidden', position: 'relative' }}>
+    <div style={{ width: '100vw', height: '60vh', display: 'flex', justifyContent: 'start', alignItems: 'left', borderRadius: '10px', backgroundColor: 'white', boxShadow: '0 0 10px 0 rgba(0, 0, 0, 0.1)', margin: '2px', overflow: 'hidden', position: 'relative' }}>
       <SmartChart
         symbol={symbol}
         isMobile={true}

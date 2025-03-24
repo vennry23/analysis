@@ -220,7 +220,7 @@ const CircleDesign: React.FC = () => {
 
   // Remove old ticks after they move out of view
   useEffect(() => {
-    const maxTicks = window.innerWidth >= 768 ? 18 : 5; // 18 ticks on large screens, 4 on small screens
+    const maxTicks = window.innerWidth >= 768 ? 20 : 5; // 18 ticks on large screens, 4 on small screens
     if (tickStream.length > maxTicks) {
       setTickStream((prev) => prev.slice(1)); // Remove the oldest tick
     }
@@ -235,8 +235,8 @@ const CircleDesign: React.FC = () => {
   }
 
   return (
-    <div className="bg-white flex flex-col rounded-md shadow-[0_4px_10px_rgba(255,255,255,0.8)] items-center justify-center p-4 sm:p-8 md:mx-8 -mx-4 w-full z-50">
-      <div className="bg-gray-100 rounded-md shadow-md flex items-center justify-center p-4 sm:p-8 w-full z-50">
+    <div className="bg-white flex flex-col rounded-md shadow-[0_4px_10px_rgba(255,255,255,0.8)] items-center justify-center w-full z-50 m-2">
+      <div className="bg-gray-100 rounded-md shadow-md flex items-center justify-center p-2 sm:p-8 w-full z-50">
         <CircleRow circles={data} pointerPosition={lastDigit} />
       </div>
       <div className="bg-gray-100 rounded-md shadow-[0_4px_10px_rgba(255,255,255,0.8)] flex flex-col items-center justify-center p-4 sm:p-8 w-full z-50 my-3">
