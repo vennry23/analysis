@@ -9,7 +9,7 @@ export class DerivAPI {
     private static reconnectAttempts = 0;
     private static maxReconnectAttempts = 5;
     private static reconnectDelay = 1000; // Start with 1 second delay
-    private static appId = 66642;
+    private static appId = 70344;
     private static wsUrl = `wss://ws.binaryws.com/websockets/v3?app_id=${this.appId}`;
     static connection: any;
     static endpoint: string | URL;
