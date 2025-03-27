@@ -2,6 +2,7 @@
 
 import React, { useMemo, useState, useEffect } from "react";
 import { useTickCounterContext } from "@/context/use-tickcounter";
+import './Circles.css'
 
 type CircleProps = {
   id: number;
@@ -63,7 +64,7 @@ const Circle: React.FC<CircleProps> = ({
         />
       </svg>
       <div
-        className="absolute inset-0 flex items-center justify-center rounded-full bg-gray-700"
+        className="absolute inset-0 flex items-center justify-center rounded-full bg-gray-400"
         style={{
           width: "70%",
           height: "70%",
@@ -229,7 +230,7 @@ const CircleDesign: React.FC = () => {
   if (data.length === 0) {
     return (
       <div className="bg-transparent p-6 sm:p-8 z-50">
-        <p className="text-center text-gray-500">No data available.</p>
+        <p className="text-center text-gray-500">Finest Traders...</p>
       </div>
     );
   }
@@ -284,14 +285,15 @@ const CircleDesign: React.FC = () => {
           </div>
         </div>
         {/* Live Stream Section */}
+        {/* Live Stream Section */}
         <div className="mt-6 w-full">
           <div className="relative h-20 overflow-hidden">
-            <div className="flex space-x-4 animate-moveLeft">
+            <div className="absolute left-0 top-0 h-full flex items-center space-x-4">
               {tickStream.map((tick) => (
                 <div
                   key={tick.id}
-                  className={`w-12 h-12 flex items-center justify-center rounded-full shadow-lg text-white font-bold text-lg animate-float ${tick.type === "O" ? "bg-green-500" : "bg-red-500"
-                    }`}
+                  className={`w-12 h-12 flex items-center justify-center rounded-full shadow-lg text-white font-bold text-lg ${tick.type === "O" ? "bg-green-500" : "bg-red-500"
+                    } animate-slideIn`}
                 >
                   {tick.type}
                 </div>
