@@ -240,7 +240,7 @@ const CircleDesign: React.FC = () => {
       <div className="bg-gray-100 rounded-md shadow-md flex items-center justify-center p-2 sm:p-8 w-full z-50">
         <CircleRow circles={data} pointerPosition={lastDigit} />
       </div>
-      <div className="bg-gray-100 rounded-md shadow-[0_4px_10px_rgba(255,255,255,0.8)] flex flex-col items-center justify-center p-4 sm:p-8 w-full z-50 my-3">
+      {/*<div className="bg-gray-100 rounded-md shadow-[0_4px_10px_rgba(255,255,255,0.8)] flex flex-col items-center justify-center p-4 sm:p-8 w-full z-50 my-3">
         <h1 className="text-lg font-semibold mb-4 text-blue-900 animate-fade-in">
           Over and Under Analysis
         </h1>
@@ -284,8 +284,7 @@ const CircleDesign: React.FC = () => {
             </span>
           </div>
         </div>
-        {/* Live Stream Section */}
-        {/* Live Stream Section */}
+        
         <div className="mt-6 w-full">
           <div className="relative h-20 overflow-hidden">
             <div className="absolute left-0 top-0 h-full flex items-center space-x-4">
@@ -301,7 +300,7 @@ const CircleDesign: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
