@@ -44,11 +44,8 @@ const DerivChartPage = () => {
       <div className="flex flex-col flex-grow">
 
         {/* Market Selector/Dropdown */}
-        {/* If you have a market selector dropdown, add it here.
-            Example placeholder below, replace with your actual dropdown if needed: */}
         <div className="w-full flex justify-center mt-4 mb-4">
-          {/* <MarketSelector /> */}
-          {/* Or your own dropdown code. */}
+          {/* Add your market selector dropdown here if needed */}
         </div>
 
         {/* Digit Analysis Tool */}
@@ -103,7 +100,7 @@ const DerivChartPage = () => {
           )}
         </div>
 
-        {/* Circles (if you want to keep this visual, otherwise remove) */}
+        {/* Circles visualization */}
         <div className="relative flex justify-center items-center">
           <Circles />
         </div>
