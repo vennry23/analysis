@@ -24,7 +24,7 @@ const Circle: React.FC<CircleProps> = ({
   isHighlighted,
   percentage,
   isPointer,
-  fillColor = "#e2e8f0",
+  fillColor = "#3b82f6", // Changed to blue-500
 }) => {
   const radius = 20;
   const circumference = 2 * Math.PI * radius;
@@ -32,12 +32,14 @@ const Circle: React.FC<CircleProps> = ({
 
   return (
     <div
-      className={`relative flex flex-col items-center justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full shadow-xl text-center transition-all duration-500 ease-in-out ${isHighlighted
-        ? "animate-pulse ring-2 sm:ring-4 ring-blue-300 transform scale-110"
-        : "hover:scale-105"
-        }`}
+      className={`relative flex flex-col items-center justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full shadow-xl text-center transition-all duration-500 ease-in-out ${
+        isHighlighted
+          ? "animate-pulse ring-2 sm:ring-4 ring-blue-400 transform scale-110"
+          : "hover:scale-105"
+      }`}
       style={{
-        boxShadow: "0 4px 10px rgba(0, 0, 0, 0.5)",
+        boxShadow: "0 4px 10px rgba(0, 0, 0, 0.7)",
+        backgroundColor: "#1e293b" // slate-800
       }}
     >
       <svg className="absolute inset-0 w-full h-full" viewBox="0 0 50 50">
@@ -46,7 +48,7 @@ const Circle: React.FC<CircleProps> = ({
           cy="25"
           r={radius}
           fill="transparent"
-          stroke="#ffffff"
+          stroke="#334155" // slate-700
           strokeWidth="6"
         />
         <circle
@@ -64,17 +66,18 @@ const Circle: React.FC<CircleProps> = ({
         />
       </svg>
       <div
-        className="absolute inset-0 flex items-center justify-center rounded-full bg-gray-400"
+        className="absolute inset-0 flex items-center justify-center rounded-full"
         style={{
           width: "70%",
           height: "70%",
           top: "15%",
           left: "15%",
+          backgroundColor: "#0f172a" // slate-900
         }}
       ></div>
       <div className="relative z-10 flex flex-col items-center justify-center">
         <span className="text-xs sm:text-sm font-semibold text-white">{id}</span>
-        <span className="text-[10px] sm:text-xs mt-0.5 sm:mt-1 text-white">
+        <span className="text-[10px] sm:text-xs mt-0.5 sm:mt-1 text-slate-300">
           {value}
         </span>
       </div>
@@ -141,11 +144,11 @@ const CircleDesign: React.FC = () => {
     return percentagesArray.map(({ id, percentage }) => {
       const value = `${percentage.toFixed(1)}%`;
       const isHighlighted = id === lastDigit;
-      let fillColor = "#1e3a8a";
+      let fillColor = "#3b82f6"; // blue-500
       if (id === minPercentageCircle.id) {
-        fillColor = "#EF4444";
+        fillColor = "#ef4444"; // red-500
       } else if (id === maxPercentageCircle.id) {
-        fillColor = "#10B981";
+        fillColor = "#10b981"; // green-500
       }
 
       return {
